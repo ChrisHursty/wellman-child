@@ -11583,7 +11583,10 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.navbar {
+  background-color: dodgerblue; }
+
 body {
-  background-color: #fff; }
+  background-color: #ffffff; }
 
 /*# sourceMappingURL=child-theme.css.map */
