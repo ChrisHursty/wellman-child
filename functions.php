@@ -25,6 +25,8 @@ function theme_enqueue_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	// Add Font Awesome
+	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css' );
 }
 
 function add_child_theme_textdomain() {

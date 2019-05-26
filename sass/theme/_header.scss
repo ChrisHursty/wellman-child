@@ -1,5 +1,110 @@
+// #ef3b23 - WDC Red
+body {
+	background-color: #ffffff;
+}
 
+.pre-header-container {
+	background-color: #000 !important;
+}
+
+#menu-pre-nav-social-links {
+	margin: 8px 0;
+	padding-left: 0;
+
+	li {
+		background-color: #fff;
+		border-radius: 50px;
+		display: inline-block;
+		height: 25px;
+		list-style: none;
+		margin-right: 12px;
+		text-align: center;
+		width: 25px;
+
+		a {
+			color: #000;
+			display: block;
+			font-size: 16px;
+			transition: color .5s ease-out;
+
+			&:hover {
+				color: #ef3b23;
+			}
+		}
+	}
+}
+
+#pre-nav-menu {
+	li {
+		border: 1px solid #fff;
+		font-family: "proxima-nova", sans-serif;
+		margin-left: 10px;
+		padding: 5px 10px;
+		text-transform: uppercase;
+		transition: background-color .5s ease-out;
+
+		a {
+			color: #fff;
+			font-size: 12px;
+			font-weight: 700;
+			padding: 0;
+
+			@media only screen and (max-width: 767px) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&:hover {
+			background-color: #fff;
+
+			a {
+				color: #000;
+			}
+
+			@media only screen and (max-width: 767px) {
+				background-color: transparent;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		@media only screen and (max-width: 767px) {
+			border: transparent;
+			float: left;
+			// width: 100%;
+		}
+	}
+}
+
+#preNavDropdown {
+	@media only screen and (max-width: 767px) {
+		float: left;
+		width: 134px;
+	}
+}
+
+.pre-header-container {
+
+	.navbar-toggler {
+		border-color: rgba(255, 255, 255, 0);
+		color: rgba(255, 255, 255, 0);
+		
+
+		.navbar-toggler-icon {
+			background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='0' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+		}
+
+		@media only screen and (max-width: 767px) {
+			float: right;
+			width: 56px;
+		}
+	}
+}
 
 .navbar {
-	background-color: dodgerblue;
+	background-color: #fff;
 }
