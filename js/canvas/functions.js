@@ -1,6 +1,6 @@
 (function( $ ) {
 
-	// Owl Carousel Scripts
+	// Large Carousel
 	$('#oc-features').owlCarousel({
 		items: 1,
 		margin: 60,
@@ -12,6 +12,24 @@
 			768: { items: 2 },
 			1200: { stagePadding: 200 }
 		},
+	});
+
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 40,
+		nav: false,
+		stagePadding: 40,
+		responsive:{
+			0:{
+				items:3
+			},
+			600:{
+				items:5
+			},
+			1000:{
+				items:7
+			}
+		}
 	});
 
 })( jQuery );

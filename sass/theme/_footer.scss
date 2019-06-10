@@ -1,17 +1,37 @@
 #wrapper-footer-full {
-	background-color: #4a4a4a;
+	background-color: $footer-bg;
 
-	h3 {
-		color: $white;
-		font-family: $proxima;
-		font-size: 24px;
-		font-style: italic;
-		font-weight: 900;
-		text-align: center;
-		text-transform: uppercase;
+	#footer-full-content {
+		h3.widget-title {
+			color: $white;
+			font-family: $proxima;
+			font-size: 24px;
+			font-style: italic;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+
+		.textwidget {
+			color: $white;
+			font-family: $proxima;
+			font-size: 18px;
+			font-style: italic;
+			font-weight: 900;
+		}
 	}
 }
+#wrapper-footer {
+	background-color: $footer-bg;
+	padding: 15px 0 10px;
 
+	.footer-copy {
+		text-align: center;
+
+		p {
+			color: $white;
+		}
+	}
+}
 
 
 

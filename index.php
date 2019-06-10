@@ -91,6 +91,43 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<div class="container-fluid section-heading">
+	<div class="container">
+		<div class="row">
+			<h2>Key Customer Programs</h2>
+		</div>
+	</div>
+</div>
+<div class="container-fluid carousel-small">
+	<?php
+	$args = array(
+		'post_type'      => 'carousel_small',
+		'posts_per_page' => 10
+	);
+	$loop = new WP_Query( $args );
+	while ( $loop->have_posts() ) : $loop->the_post();
+	?>
+		<?php if( have_rows('carousel_content') ): ?>
 
+			<div class="owl-carousel owl-theme">
+
+			<?php while( have_rows('carousel_content') ): the_row(); 
+
+				// Repeater Sub Fields
+				$image = get_sub_field('bg_image');
+				$title = get_sub_field('title');
+				?>
+				<div class="item">
+					<img src="<?php echo $image['url']; ?>" alt="" />
+					<h4><?php echo $title; ?></h4>
+				</div>
+			<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
+	<?php endwhile;
+	wp_reset_query();
+	?>
+
+</div>
 
 <?php get_footer();

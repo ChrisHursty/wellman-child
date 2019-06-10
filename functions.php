@@ -44,62 +44,123 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 if ( ! function_exists('home_page_carousel') ) {
 
-// Register Custom Post Type
-function home_page_carousel() {
+	// Register Custom Post Type
+	function home_page_carousel() {
 
-	$labels = array(
-		'name'                  => _x( 'Slides', 'Post Type General Name', 'understrap-child' ),
-		'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'understrap-child' ),
-		'menu_name'             => __( 'Carousels (Large)', 'understrap-child' ),
-		'name_admin_bar'        => __( 'Carousels (Large)', 'understrap-child' ),
-		'archives'              => __( 'Item Archives', 'understrap-child' ),
-		'attributes'            => __( 'Item Attributes', 'understrap-child' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
-		'all_items'             => __( 'All Items', 'understrap-child' ),
-		'add_new_item'          => __( 'Add New Item', 'understrap-child' ),
-		'add_new'               => __( 'Add New', 'understrap-child' ),
-		'new_item'              => __( 'New Item', 'understrap-child' ),
-		'edit_item'             => __( 'Edit Item', 'understrap-child' ),
-		'update_item'           => __( 'Update Item', 'understrap-child' ),
-		'view_item'             => __( 'View Item', 'understrap-child' ),
-		'view_items'            => __( 'View Items', 'understrap-child' ),
-		'search_items'          => __( 'Search Item', 'understrap-child' ),
-		'not_found'             => __( 'Not found', 'understrap-child' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'understrap-child' ),
-		'featured_image'        => __( 'Carousel Image', 'understrap-child' ),
-		'set_featured_image'    => __( 'Set Carousel Image', 'understrap-child' ),
-		'remove_featured_image' => __( 'Remove Carousel Image', 'understrap-child' ),
-		'use_featured_image'    => __( 'Use as Carousel Image', 'understrap-child' ),
-		'insert_into_item'      => __( 'Insert into item', 'understrap-child' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'understrap-child' ),
-		'items_list'            => __( 'Items list', 'understrap-child' ),
-		'items_list_navigation' => __( 'Items list navigation', 'understrap-child' ),
-		'filter_items_list'     => __( 'Filter items list', 'understrap-child' ),
-	);
-	$args = array(
-		'label'                 => __( 'Slide', 'understrap-child' ),
-		'description'           => __( 'Carousels Large', 'understrap-child' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-slides',
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
-	);
-	register_post_type( 'home_page_carousel', $args );
+		$labels = array(
+			'name'                  => _x( 'Slides', 'Post Type General Name', 'understrap-child' ),
+			'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'understrap-child' ),
+			'menu_name'             => __( 'Carousels (Large)', 'understrap-child' ),
+			'name_admin_bar'        => __( 'Carousels (Large)', 'understrap-child' ),
+			'archives'              => __( 'Item Archives', 'understrap-child' ),
+			'attributes'            => __( 'Item Attributes', 'understrap-child' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
+			'all_items'             => __( 'All Items', 'understrap-child' ),
+			'add_new_item'          => __( 'Add New Item', 'understrap-child' ),
+			'add_new'               => __( 'Add New', 'understrap-child' ),
+			'new_item'              => __( 'New Item', 'understrap-child' ),
+			'edit_item'             => __( 'Edit Item', 'understrap-child' ),
+			'update_item'           => __( 'Update Item', 'understrap-child' ),
+			'view_item'             => __( 'View Item', 'understrap-child' ),
+			'view_items'            => __( 'View Items', 'understrap-child' ),
+			'search_items'          => __( 'Search Item', 'understrap-child' ),
+			'not_found'             => __( 'Not found', 'understrap-child' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'understrap-child' ),
+			'featured_image'        => __( 'Carousel Image', 'understrap-child' ),
+			'set_featured_image'    => __( 'Set Carousel Image', 'understrap-child' ),
+			'remove_featured_image' => __( 'Remove Carousel Image', 'understrap-child' ),
+			'use_featured_image'    => __( 'Use as Carousel Image', 'understrap-child' ),
+			'insert_into_item'      => __( 'Insert into item', 'understrap-child' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'understrap-child' ),
+			'items_list'            => __( 'Items list', 'understrap-child' ),
+			'items_list_navigation' => __( 'Items list navigation', 'understrap-child' ),
+			'filter_items_list'     => __( 'Filter items list', 'understrap-child' ),
+		);
+		$args = array(
+			'label'                 => __( 'Slide', 'understrap-child' ),
+			'description'           => __( 'Carousels Large', 'understrap-child' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'            => array( 'category', 'post_tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-slides',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'home_page_carousel', $args );
+	}
+
+	add_action( 'init', 'home_page_carousel', 0 );
 
 }
-add_action( 'init', 'home_page_carousel', 0 );
+
+if ( ! function_exists('carousel_small') ) {
+
+	// Register Custom Post Type
+	function carousel_small() {
+
+		$labels = array(
+			'name'                  => _x( 'Slides', 'Post Type General Name', 'understrap-child' ),
+			'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'understrap-child' ),
+			'menu_name'             => __( 'Carousels (Small)', 'understrap-child' ),
+			'name_admin_bar'        => __( 'Carousels (Small)', 'understrap-child' ),
+			'archives'              => __( 'Item Archives', 'understrap-child' ),
+			'attributes'            => __( 'Item Attributes', 'understrap-child' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
+			'all_items'             => __( 'All Items', 'understrap-child' ),
+			'add_new_item'          => __( 'Add New Item', 'understrap-child' ),
+			'add_new'               => __( 'Add New', 'understrap-child' ),
+			'new_item'              => __( 'New Item', 'understrap-child' ),
+			'edit_item'             => __( 'Edit Item', 'understrap-child' ),
+			'update_item'           => __( 'Update Item', 'understrap-child' ),
+			'view_item'             => __( 'View Item', 'understrap-child' ),
+			'view_items'            => __( 'View Items', 'understrap-child' ),
+			'search_items'          => __( 'Search Item', 'understrap-child' ),
+			'not_found'             => __( 'Not found', 'understrap-child' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'understrap-child' ),
+			'featured_image'        => __( 'Carousel Image', 'understrap-child' ),
+			'set_featured_image'    => __( 'Set Carousel Image', 'understrap-child' ),
+			'remove_featured_image' => __( 'Remove Carousel Image', 'understrap-child' ),
+			'use_featured_image'    => __( 'Use as Carousel Image', 'understrap-child' ),
+			'insert_into_item'      => __( 'Insert into item', 'understrap-child' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'understrap-child' ),
+			'items_list'            => __( 'Items list', 'understrap-child' ),
+			'items_list_navigation' => __( 'Items list navigation', 'understrap-child' ),
+			'filter_items_list'     => __( 'Filter items list', 'understrap-child' ),
+		);
+		$args = array(
+			'label'                 => __( 'Small Slide', 'understrap-child' ),
+			'description'           => __( 'Carousels Small', 'understrap-child' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'            => array( 'category', 'post_tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 6,
+			'menu_icon'             => 'dashicons-slides',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'carousel_small', $args );
+	}
+
+	add_action( 'init', 'carousel_small', 0 );
 
 }
 
@@ -112,3 +173,15 @@ function register_pre_nav_social_menu() {
 	register_nav_menu('pre-nav-social-menu',__( 'Pre-Header Social Menu' ));
 }
 add_action( 'init', 'register_pre_nav_social_menu' );
+
+function understrap_site_info() { ?>
+	<div class="container footer-copy">
+		<div class="row align-items-center">
+			<div class="col">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.png" alt="">
+				<p>Wellman Dynamics Corporation LLC. &copy;<?php echo date('Y'); ?>. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+	
+<?php }
