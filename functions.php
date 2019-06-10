@@ -27,6 +27,13 @@ function theme_enqueue_styles() {
 	}
 	// Add Font Awesome
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css' );
+
+	// Home Page
+	if ( is_home() ) {
+		wp_enqueue_style( 'carousel-styles', get_stylesheet_directory_uri() . '/css/canvas/swiper.css', array(), $the_theme->get( 'Version' ) );
+		wp_enqueue_script( 'carousel-scripts', get_stylesheet_directory_uri() . '/js/canvas/jquery.owlcarousel.js', array(), $the_theme->get( 'Version' ), true );
+		wp_enqueue_script( 'carousel-custom-scripts', get_stylesheet_directory_uri() . '/js/canvas/functions.js', array(), $the_theme->get( 'Version' ), true );
+	}
 }
 
 function add_child_theme_textdomain() {
@@ -43,8 +50,8 @@ function home_page_carousel() {
 	$labels = array(
 		'name'                  => _x( 'Slides', 'Post Type General Name', 'understrap-child' ),
 		'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'understrap-child' ),
-		'menu_name'             => __( 'Home Page Carousel', 'understrap-child' ),
-		'name_admin_bar'        => __( 'Home Page Carousel', 'understrap-child' ),
+		'menu_name'             => __( 'Carousels (Large)', 'understrap-child' ),
+		'name_admin_bar'        => __( 'Carousels (Large)', 'understrap-child' ),
 		'archives'              => __( 'Item Archives', 'understrap-child' ),
 		'attributes'            => __( 'Item Attributes', 'understrap-child' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
@@ -71,7 +78,7 @@ function home_page_carousel() {
 	);
 	$args = array(
 		'label'                 => __( 'Slide', 'understrap-child' ),
-		'description'           => __( 'Home Page Carousel', 'understrap-child' ),
+		'description'           => __( 'Carousels Large', 'understrap-child' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),

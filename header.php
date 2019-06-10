@@ -99,14 +99,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-				<form class="form-inline">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
 				<form class="form-inline" action="/" method="get">
-					<label for="search">Search in <?php echo home_url( '/' ); ?></label>
 					<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
-					<input type="image" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search.png" />
+					<input type="image" alt="Search" src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png" />
 				</form>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->

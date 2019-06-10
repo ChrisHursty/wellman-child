@@ -3,10 +3,7 @@ body {
 	background-color: #ffffff;
 }
 
-.pre-header-container {
-	background-color: #000 !important;
-}
-
+// Pre Nav Header
 #menu-pre-nav-social-links {
 	margin: 8px 0;
 	padding-left: 0;
@@ -37,7 +34,7 @@ body {
 #pre-nav-menu {
 	li {
 		border: 1px solid #fff;
-		font-family: "proxima-nova", sans-serif;
+		font-family: $proxima;
 		margin-left: 10px;
 		padding: 5px 10px;
 		text-transform: uppercase;
@@ -88,11 +85,11 @@ body {
 }
 
 .pre-header-container {
+	background-color: #000 !important;
 
 	.navbar-toggler {
 		border-color: rgba(255, 255, 255, 0);
 		color: rgba(255, 255, 255, 0);
-		
 
 		.navbar-toggler-icon {
 			background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='0' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -105,6 +102,45 @@ body {
 	}
 }
 
+// Main Navigation
 .navbar {
 	background-color: #fff;
+
+	.custom-logo-link {
+		max-width: 240px;
+	}
+
+	#navbarNavDropdown {
+		ul#main-menu {
+			li {
+				font-family: $proxima;
+				font-size: 17px;
+				transition: color .5s ease-out;
+
+				a {
+					color: #000;
+					font-weight: 700;
+					text-transform: uppercase;
+
+					&:hover {
+						color: $grey;
+					}
+				}
+			}
+		}
+	}
+
+	.form-inline {
+		margin-left: 20px;
+
+		input[type="text"] {
+			display: none;
+		}
+
+	}
 }
+
+
+
+
+
