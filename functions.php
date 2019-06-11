@@ -54,6 +54,7 @@ function custom_image_sizes() {
 	add_image_size( 'carousel-small', 200, 150 ); 
 	add_image_size( 'carousel-large', 820, 560, true );
 	add_image_size( 'home-page-icon', 85, 85, true );
+	add_image_size( 'page-header', 1980, 400, true );
 }
 
 

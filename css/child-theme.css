@@ -18695,6 +18695,12 @@ body {
   background-color: #fff; }
   .navbar .custom-logo-link {
     max-width: 240px; }
+    @media (max-width: 767.98px) {
+      .navbar .custom-logo-link {
+        max-width: 190px;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; } }
   .navbar #navbarNavDropdown ul#main-menu li {
     font-family: "proxima-nova", sans-serif;
     font-size: 17px;
@@ -18706,10 +18712,28 @@ body {
       text-transform: uppercase; }
       .navbar #navbarNavDropdown ul#main-menu li a:hover {
         color: #afafaf; }
+  @media (max-width: 767.98px) {
+    .navbar .navbar-toggler {
+      border-color: transparent;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; } }
+  @media (max-width: 767.98px) {
+    .navbar .navbar-collapse {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; } }
   .navbar .form-inline {
     margin-left: 20px; }
     .navbar .form-inline input[type="text"] {
       display: none; }
+    @media (max-width: 767.98px) {
+      .navbar .form-inline {
+        margin-left: 0;
+        margin-right: 20px;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3; } }
 
 #wrapper-footer-full {
   background-color: #4a4a4a; }
@@ -19232,5 +19256,36 @@ body {
     font-weight: bold;
     line-height: 29px;
     width: 100%; }
+
+.header-image {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .header-image .page-title {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 50px 20px; }
+    .header-image .page-title h1 {
+      color: #ffffff;
+      font-family: "proxima-nova", sans-serif;
+      font-size: 63px;
+      font-style: italic;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase; }
+
+.address {
+  color: #000000;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 32px; }
 
 /*# sourceMappingURL=child-theme.css.map */

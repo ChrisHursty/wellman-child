@@ -1,0 +1,31 @@
+.header-image {
+	align-items: center;
+	display: flex;
+	height: 400px;
+	justify-content: center;
+
+	.page-title {
+		background-color: rgba( 0, 0, 0, 0.7);
+		padding: 30px 50px 20px;
+
+		h1 {
+			color: $white;
+			font-family: $proxima;
+			font-size: 63px;
+			font-style: italic;
+			font-weight: 900;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.address {
+	color: $black;
+	font-family: $proxima;
+	font-size: 28px;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 32px;
+}
+
