@@ -14,10 +14,17 @@
 		},
 	});
 
+	// Small Carousel
 	$('.owl-carousel').owlCarousel({
 		loop: true,
-		margin: 40,
+		autoplay: true,
+		slideTransition: 'linear',
+		autoplayTimeout: 7500,
+		autoplaySpeed: 7500,
+		autoplayHoverPause: false,
+		margin: 25,
 		nav: false,
+		dots: false,
 		stagePadding: 40,
 		responsive:{
 			0:{

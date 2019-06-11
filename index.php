@@ -22,45 +22,46 @@ get_header(); ?>
 <!-- Carousel
 ============================================= -->
 <div class="section nobg clearfix wdc-carousel">
+	<?php
+	$args = array(
+		//'name'           => 'home-page-carousel',
+		'post_type'      => 'home_page_carousel',
+		'posts_per_page' => 1
+	);
+	$big_loop = new WP_Query( $args );
+	while ( $big_loop->have_posts() ) : $big_loop->the_post();
+	?>
+		<?php if( have_rows('carousel') ): ?>
 
-	<div id="oc-features" class="owl-carousel owl-carousel-full image-carousel carousel-widget">
-		<div class="oc-item">
-			<div class="row cleafix">
-				<div class="col-xl-8">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/css/canvas/images/carousel/carousel1.jpg" alt="">
+			<div id="oc-features" class="owl-carousel owl-carousel-full image-carousel carousel-widget">
+
+			<?php while( have_rows('carousel') ): the_row(); 
+
+				// Repeater Sub Fields
+				$image = get_sub_field('image');
+				$heading = get_sub_field('heading');
+				$excerpt = get_sub_field('excerpt');
+				$link_text = get_sub_field('page_link_text');
+				$link_url = get_sub_field('page_link_url');
+				?>
+				<div class="oc-item">
+					<div class="row cleafix">
+						<div class="col-xl-8">
+							<img src="<?php echo $image['url']; ?>" alt="" />
+						</div>
+						<div class="col-xl-4" style="padding: 20px 0 0 20px;">
+							<h3><?php echo $heading; ?></h3>
+							<p><?php echo $excerpt; ?></p>
+							<a href="<?php echo $link_url; ?>" class="button-link"><?php echo $link_text; ?></a>
+						</div>
+					</div>
 				</div>
-				<div class="col-xl-4" style="padding: 20px 0 0 20px;">
-					<h3>Aluminum</h3>
-					<p>Uniquely plagiarize dynamic convergence after equity invested experiences. Holisticly repurpose installed base infomediaries before web-enabled methods of empowerment.</p>
-					<a href="#" class="button-link">Read More</a>
-				</div>
+			<?php endwhile; ?>
 			</div>
-		</div>
-		<div class="oc-item">
-			<div class="row cleafix">
-				<div class="col-xl-8">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/css/canvas/images/carousel/carousel2.jpg" alt="">
-				</div>
-				<div class="col-xl-4" style="padding: 20px 0 0 20px;">
-					<h3>Magnesium</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor mollitia dignissimos, assumenda consequuntur consectetur! Laborum reiciendis, accusamus possimus et similique nisi obcaecati ex doloremque ea odio.</p>
-					<a href="#" class="button-link">Read More</a>
-				</div>
-			</div>
-		</div>
-		<div class="oc-item">
-			<div class="row cleafix">
-				<div class="col-xl-8">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/css/canvas/images/carousel/carousel1.jpg" alt="">
-				</div>
-				<div class="col-xl-4" style="padding: 20px 0 0 20px;">
-					<h3>Aerospace</h3>
-					<p>Dolor mollitia dignissimos, assumenda consequuntur consectetur! Laborum reiciendis, error explicabo consectetur adipisci, accusamus possimus et similique nisi obcaecati ex doloremque ea odio.</p>
-					<a href="#" class="button-link">Read More</a>
-				</div>
-			</div>
-		</div>
-	</div>
+		<?php endif; ?>
+	<?php endwhile;
+	wp_reset_query();
+	?>
 </div>
 <div class="container-fluid section-heading">
 	<div class="container">
@@ -72,8 +73,9 @@ get_header(); ?>
 <div class="container-fluid carousel-small">
 	<?php
 	$args = array(
+		'name'           => 'home-page-carousel',
 		'post_type'      => 'carousel_small',
-		'posts_per_page' => 10
+		'posts_per_page' => 1
 	);
 	$loop = new WP_Query( $args );
 	while ( $loop->have_posts() ) : $loop->the_post();
@@ -98,7 +100,17 @@ get_header(); ?>
 	<?php endwhile;
 	wp_reset_query();
 	?>
-
 </div>
-
+<div class="container-fluid section-heading">
+	<div class="container">
+		<div class="row">
+			<h2>WDC Quality Accreditations</h2>
+		</div>
+	</div>
+</div>
+<div class="container pre-footer">
+	<div class="row">
+		<?php dynamic_sidebar( 'pre-footer' ); ?>
+	</div>
+</div>
 <?php get_footer();

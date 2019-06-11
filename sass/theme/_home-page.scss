@@ -39,11 +39,12 @@
 
 			.image {
 				display: block;
-				margin: 10px auto;
+				margin: 20px auto 10px;
 				text-align: center;
 			}
 
 			.content {
+				align-items: center;
 				display: flex;
 				flex-direction: column;
 				padding: 0 15px;
@@ -68,6 +69,7 @@
 				}
 
 				button {
+					align-self: flex-end;
 					background-color: $primary;
 					border-color: transparent;
 					color: $white;
@@ -522,13 +524,57 @@
 			}
 		}
 	}
+
 	.carousel-small {
+		padding-bottom: 40px;
+		padding-left: 0;
+		padding-right: 0;
+
+		.owl-nav {
+			display: none;
+		}
+
 		.owl-stage-outer {
 			margin-top: 40px;
+
+			.owl-item {
+				.item {
+					position: relative;
+
+					h4 {
+						color: $white;
+						font-family: $proxima;
+						font-size: 20px;
+						font-style: italic;
+						font-weight: bold;
+						position: absolute;
+							right: 0; bottom: 4px; left: 0;
+						text-align: center;
+						text-transform: uppercase;
+						width: 100%;
+					}
+				}
+			}
 		}
 	}
 }
 
+.pre-footer {
+	background-image: url('../images/pre-footer-bg-logo.png');
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding: 50px 0;
+
+	.textwidget {
+		color: $black;
+		font-family: $proxima;
+		font-size: 22px;
+		font-style: italic;
+		font-weight: bold;
+		line-height: 29px;
+		width: 100%;
+	}
+}
 
 
 

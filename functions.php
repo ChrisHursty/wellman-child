@@ -219,6 +219,18 @@ if ( ! function_exists( 'custom_widgets_init' ) ) {
 				'after_title'   => '</h3>',
 			)
 		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Pre Footer Area', 'understrap' ),
+				'id'            => 'pre-footer',
+				'description'   => __( 'Area just above the Footer', 'understrap' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
 	}
 } // endif function_exists( 'custom_widgets_init' ).
 
