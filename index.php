@@ -11,36 +11,7 @@ get_header(); ?>
 		<div class="container">
 			<h2>PREMIUM GRADE ALUMINUM &amp; MAGNESIUM CASTINGS</h2>
 			<div class="row">
-				<div class="col">
-					<div class="image">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/key-process-icon.png" alt="">
-					</div>
-					<div class="content">
-						<h4>KEY PROCESSES</h4>
-						<p>Our state of the art foundry has been recognized for delivering only the highest quality precision aerospace castings and extending the envelope of aluminum and magnesium precision dry sand, low pressure sand.</p>
-						<button>Read More</button>
-					</div>
-				</div>
-				<div class="col">
-					<div class="image">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-house-cap-icon.png" alt="">
-					</div>
-					<div class="content">
-						<h4>IN-HOUSE CAPABILITIES</h4>
-						<p>Wellman Dynamics provides our customers with a host of special services ranging from Shape and Geometrical Complexity to Mechanical Properties and value added operations such as machining and assembly.</p>
-						<button>Read More</button>
-					</div>
-				</div>
-				<div class="col">
-					<div class="image">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/employee-opp-icon.png" alt="">
-					</div>
-					<div class="content">
-						<h4>EMPLOYMENT OPPORTUNITIES</h4>
-						<p>Wellman Dynamics is proud that its skilled workforce is able to produce mission critical products including the largest and most complex precision castings in the aerospace industry. Click the link below for employment opportunities at our company.</p>
-						<button>Read More</button>
-					</div>
-				</div>
+				<?php dynamic_sidebar( 'under-home-slider' ); ?>
 			</div>
 		</div>
 		
