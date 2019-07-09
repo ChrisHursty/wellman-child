@@ -3,7 +3,7 @@ get_header(); ?>
 
 <div class="hero">
 	<div class="container-fluid">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/apache-hero-full.jpg" alt="">
+		<?php dynamic_sidebar( 'home-page-slider' ); ?>
 	</div>
 </div>
 <div class="about-wdc">

@@ -273,6 +273,18 @@ if ( ! function_exists( 'custom_widgets_init' ) ) {
 	function custom_widgets_init() {
 		register_sidebar(
 			array(
+				'name'          => __( 'Home Page Slider', 'understrap' ),
+				'id'            => 'home-page-slider',
+				'description'   => __( 'Home Page Slideshow', 'understrap' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
 				'name'          => __( 'Under Home Slider', 'understrap' ),
 				'id'            => 'under-home-slider',
 				'description'   => __( 'Area just under the Home Page Slideshow', 'understrap' ),
