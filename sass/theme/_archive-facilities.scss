@@ -1,0 +1,42 @@
+.post-type-archive-facilities {
+
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+
+		.col-md-4 {
+
+			article {
+				display: flex;
+				justify-content: center;
+				position: relative;
+
+				.page-title {
+					align-self: center;
+					background-color: rgba( 0, 0, 0, 0.7);
+					padding: 30px 50px 20px;
+					position: absolute;
+					transition: background-color .5s ease-out;
+
+					h2 {
+						color: $white;
+						font-family: $proxima;
+						font-size: 48px;
+						font-style: italic;
+						font-weight: 900;
+						text-align: center;
+						text-transform: uppercase;
+						transition: color .5s ease-out;
+					}
+
+					&:hover {
+						background-color: rgba( 0, 0, 0, 0.5);
+						h2 {
+							color: $primary-dark;
+						}
+					}
+				}
+			}
+		}
+	}
+}

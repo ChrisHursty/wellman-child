@@ -19288,4 +19288,38 @@ body {
   font-weight: 700;
   line-height: 32px; }
 
+.post-type-archive-facilities .container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+  .post-type-archive-facilities .container-fluid .col-md-4 article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative; }
+    .post-type-archive-facilities .container-fluid .col-md-4 article .page-title {
+      -ms-flex-item-align: center;
+          align-self: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px 50px 20px;
+      position: absolute;
+      -webkit-transition: background-color .5s ease-out;
+      transition: background-color .5s ease-out; }
+      .post-type-archive-facilities .container-fluid .col-md-4 article .page-title h2 {
+        color: #ffffff;
+        font-family: "proxima-nova", sans-serif;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        -webkit-transition: color .5s ease-out;
+        transition: color .5s ease-out; }
+      .post-type-archive-facilities .container-fluid .col-md-4 article .page-title:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
+        .post-type-archive-facilities .container-fluid .col-md-4 article .page-title:hover h2 {
+          color: #c81900; }
+
 /*# sourceMappingURL=child-theme.css.map */
