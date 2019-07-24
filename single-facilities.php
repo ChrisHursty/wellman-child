@@ -33,7 +33,7 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 			<main class="site-main" id="main">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'single-facilities' ); ?>
 					<?php understrap_post_nav(); ?>
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
