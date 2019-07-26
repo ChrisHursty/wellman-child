@@ -19288,9 +19288,14 @@ body {
   font-weight: 700;
   line-height: 32px; }
 
-@media only screen and (max-width: 767px) {
-  .post-type-archive-facilities .header-image {
-    height: 240px; } }
+.post-type-archive-facilities .header-image {
+  height: 150px; }
+  @media only screen and (min-width: 767px) {
+    .post-type-archive-facilities .header-image {
+      height: 240px; } }
+  @media only screen and (min-width: 1025px) {
+    .post-type-archive-facilities .header-image {
+      height: 400px; } }
 
 .post-type-archive-facilities .container-fluid {
   padding-left: 0;
@@ -19299,7 +19304,7 @@ body {
     .post-type-archive-facilities .container-fluid .page-title {
       padding: 15px 25px 10px; }
       .post-type-archive-facilities .container-fluid .page-title h1 {
-        font-size: 8vw;
+        font-size: 6vw;
         margin-bottom: 0; } }
   .post-type-archive-facilities .container-fluid .col-md-4 a:hover {
     cursor: pointer; }
@@ -19322,19 +19327,19 @@ body {
       .post-type-archive-facilities .container-fluid .col-md-4 article .page-title h2 {
         color: #ffffff;
         font-family: "proxima-nova", sans-serif;
-        font-size: 48px;
+        font-size: 6vw;
         font-style: italic;
         font-weight: 900;
         text-align: center;
         text-transform: uppercase;
         -webkit-transition: color .5s ease-out;
         transition: color .5s ease-out; }
-        @media only screen and (max-width: 767px) {
+        @media only screen and (min-width: 767px) {
           .post-type-archive-facilities .container-fluid .col-md-4 article .page-title h2 {
-            font-size: 5vw; } }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2.9vw; } }
+        @media only screen and (min-width: 1025px) {
           .post-type-archive-facilities .container-fluid .col-md-4 article .page-title h2 {
-            font-size: 3vw; } }
+            font-size: 3.3vw; } }
       @media only screen and (max-width: 767px) {
         .post-type-archive-facilities .container-fluid .col-md-4 article .page-title {
           padding: 15px 25px 10px; } }
@@ -19352,12 +19357,18 @@ body {
       margin-bottom: 20px; } }
 
 .post-type-archive-facilities .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 0;
   margin-right: 0; }
-
-.post-type-archive-facilities .col-12,
-.post-type-archive-facilities .col-md-4 {
-  padding-left: 0;
-  padding-right: 0; }
+  @media only screen and (min-width: 767px) {
+    .post-type-archive-facilities .row .col-md-4 {
+      margin-bottom: 30px; } }
+  @media only screen and (min-width: 767px) {
+    .post-type-archive-facilities .row .col-12 {
+      margin-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 /*# sourceMappingURL=child-theme.css.map */
