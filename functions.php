@@ -244,6 +244,68 @@ if ( ! function_exists('facilities') ) {
 
 }
 
+// Careers
+if ( ! function_exists('careers') ) {
+
+	// Register Custom Post Type
+	function careers() {
+
+		$labels = array(
+			'name'                  => _x( 'Careers', 'Post Type General Name', 'understrap-child' ),
+			'singular_name'         => _x( 'Job', 'Post Type Singular Name', 'understrap-child' ),
+			'menu_name'             => __( 'Careers', 'understrap-child' ),
+			'name_admin_bar'        => __( 'Careers', 'understrap-child' ),
+			'archives'              => __( 'Item Archives', 'understrap-child' ),
+			'attributes'            => __( 'Item Attributes', 'understrap-child' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
+			'all_items'             => __( 'All Jobs', 'understrap-child' ),
+			'add_new_item'          => __( 'Add New Job', 'understrap-child' ),
+			'add_new'               => __( 'Add New', 'understrap-child' ),
+			'new_item'              => __( 'New Job', 'understrap-child' ),
+			'edit_item'             => __( 'Edit Job', 'understrap-child' ),
+			'update_item'           => __( 'Update Job', 'understrap-child' ),
+			'view_item'             => __( 'View Job', 'understrap-child' ),
+			'view_items'            => __( 'View Jobs', 'understrap-child' ),
+			'search_items'          => __( 'Search Job', 'understrap-child' ),
+			'not_found'             => __( 'Not found', 'understrap-child' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'understrap-child' ),
+			'featured_image'        => __( 'Job Image', 'understrap-child' ),
+			'set_featured_image'    => __( 'Set Job Image', 'understrap-child' ),
+			'remove_featured_image' => __( 'Remove Job Image', 'understrap-child' ),
+			'use_featured_image'    => __( 'Use as Job Image', 'understrap-child' ),
+			'insert_into_item'      => __( 'Insert into job', 'understrap-child' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this job', 'understrap-child' ),
+			'items_list'            => __( 'Items list', 'understrap-child' ),
+			'items_list_navigation' => __( 'Items list navigation', 'understrap-child' ),
+			'filter_items_list'     => __( 'Filter items list', 'understrap-child' ),
+		);
+		$args = array(
+			'label'                 => __( 'Careers', 'understrap-child' ),
+			'description'           => __( 'Careers', 'understrap-child' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'            => array( 'category', 'post_tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 7,
+			'menu_icon'             => 'dashicons-groups',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'careers', $args );
+	}
+
+	add_action( 'init', 'careers', 0 );
+
+}
+
 function register_pre_nav_menu() {
 	register_nav_menu('pre-nav-menu',__( 'Pre-Header Navigation' ));
 }
