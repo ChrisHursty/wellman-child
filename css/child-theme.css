@@ -18620,6 +18620,22 @@ a.skip-link {
 .icon-line2-users:before {
   content: "\e001"; }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "proxima-nova", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+#content ul {
+  list-style-type: none; }
+  #content ul li:before {
+    content: "▪";
+    color: red;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; }
+
 body {
   background-color: #ffffff; }
 

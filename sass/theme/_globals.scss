@@ -1,0 +1,22 @@
+// Custom Global Styles
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $proxima;
+	font-style: italic;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+#content {
+	ul {
+		list-style-type: none;
+
+		li:before {
+			content: "▪";
+			color: red;
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+		}
+	}
+}
