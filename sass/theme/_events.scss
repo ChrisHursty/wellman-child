@@ -1,0 +1,14 @@
+.single-events {
+	.container-fluid {
+		padding: 0;
+		margin: 0 0 40px;
+	}
+
+	.event-content {
+		.date {
+			span {
+				color: $primary-dark;
+			}
+		}
+	}
+}

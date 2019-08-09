@@ -18636,6 +18636,15 @@ h1, h2, h3, h4, h5, h6,
     width: 1em;
     margin-left: -1em; }
 
+.acf-map {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0; }
+
+/* fixes potential theme css conflict */
+.acf-map img {
+  max-width: inherit !important; }
+
 body {
   background-color: #ffffff; }
 
@@ -19386,5 +19395,12 @@ body {
       margin-bottom: 30px;
       padding-left: 15px;
       padding-right: 15px; } }
+
+.single-events .container-fluid {
+  padding: 0;
+  margin: 0 0 40px; }
+
+.single-events .event-content .date span {
+  color: #c81900; }
 
 /*# sourceMappingURL=child-theme.css.map */

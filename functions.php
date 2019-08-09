@@ -42,6 +42,11 @@ function theme_enqueue_styles() {
 		wp_enqueue_script( 'carousel-scripts', get_stylesheet_directory_uri() . '/js/canvas/jquery.owlcarousel.js', array(), $the_theme->get( 'Version' ), true );
 		wp_enqueue_script( 'carousel-custom-scripts', get_stylesheet_directory_uri() . '/js/canvas/functions.js', array(), $the_theme->get( 'Version' ), true );
 	}
+	// Google Maps API & ACF Pro
+	wp_enqueue_script( 'google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBUFEu_kzo_EK1Ih-OMs5hgGQuG_HLhklI' );
+	//wp_enqueue_script( 'acf-pro-map', get_stylesheet_directory_uri() . '/js/acf_map.js', array(), $the_theme->get( 'Version' ), false );
+	wp_enqueue_script( 'acf-pro-map', get_stylesheet_directory_uri() . '/js/acf-pro-map.js', array(), $the_theme->get( 'Version' ), false );
+	//wp_register_script( 'googlemapsapp', get_template_directory_uri() . '/js/googlemapsapp.js', array(), '', false );
 }
 
 function add_child_theme_textdomain() {
@@ -289,7 +294,7 @@ if ( ! function_exists('careers') ) {
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_menu'          => true,
-			'menu_position'         => 7,
+			'menu_position'         => 8,
 			'menu_icon'             => 'dashicons-groups',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
@@ -303,6 +308,68 @@ if ( ! function_exists('careers') ) {
 	}
 
 	add_action( 'init', 'careers', 0 );
+
+}
+
+// Careers
+if ( ! function_exists('events') ) {
+
+	// Register Custom Post Type
+	function events() {
+
+		$labels = array(
+			'name'                  => _x( 'Events', 'Post Type General Name', 'understrap-child' ),
+			'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'understrap-child' ),
+			'menu_name'             => __( 'Events', 'understrap-child' ),
+			'name_admin_bar'        => __( 'Events', 'understrap-child' ),
+			'archives'              => __( 'Item Archives', 'understrap-child' ),
+			'attributes'            => __( 'Item Attributes', 'understrap-child' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'understrap-child' ),
+			'all_items'             => __( 'All Events', 'understrap-child' ),
+			'add_new_item'          => __( 'Add New Event', 'understrap-child' ),
+			'add_new'               => __( 'Add New', 'understrap-child' ),
+			'new_item'              => __( 'New Event', 'understrap-child' ),
+			'edit_item'             => __( 'Edit Event', 'understrap-child' ),
+			'update_item'           => __( 'Update Event', 'understrap-child' ),
+			'view_item'             => __( 'View Event', 'understrap-child' ),
+			'view_items'            => __( 'View Events', 'understrap-child' ),
+			'search_items'          => __( 'Search Event', 'understrap-child' ),
+			'not_found'             => __( 'Not found', 'understrap-child' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'understrap-child' ),
+			'featured_image'        => __( 'Event Image', 'understrap-child' ),
+			'set_featured_image'    => __( 'Set Event Image', 'understrap-child' ),
+			'remove_featured_image' => __( 'Remove Event Image', 'understrap-child' ),
+			'use_featured_image'    => __( 'Use as Event Image', 'understrap-child' ),
+			'insert_into_item'      => __( 'Insert into Event', 'understrap-child' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this Event', 'understrap-child' ),
+			'items_list'            => __( 'Items list', 'understrap-child' ),
+			'items_list_navigation' => __( 'Items list navigation', 'understrap-child' ),
+			'filter_items_list'     => __( 'Filter items list', 'understrap-child' ),
+		);
+		$args = array(
+			'label'                 => __( 'Events', 'understrap-child' ),
+			'description'           => __( 'Events', 'understrap-child' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'            => array( 'category', 'post_tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 9,
+			'menu_icon'             => 'dashicons-calendar',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'events', $args );
+	}
+
+	add_action( 'init', 'events', 0 );
 
 }
 
@@ -479,3 +546,15 @@ function register_home_page_widget() {
 	register_widget( 'HomePageWidget' );
 }
 add_action( 'widgets_init', 'register_home_page_widget' );
+
+/**
+ * ACF PRO API Key
+ */
+function my_acf_google_map_api( $api ){
+
+	$api['key'] = 'AIzaSyBUFEu_kzo_EK1Ih-OMs5hgGQuG_HLhklI';
+	return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
