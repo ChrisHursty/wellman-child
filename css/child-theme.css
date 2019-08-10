@@ -19403,4 +19403,41 @@ body {
 .single-events .event-content .date span {
   color: #c81900; }
 
+.events-archive .card-container {
+  margin-bottom: 30px; }
+  .events-archive .card-container article {
+    display: block;
+    height: 284px;
+    position: relative;
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .events-archive .card-container article {
+        height: 300px; } }
+    .events-archive .card-container article .event-details {
+      background-color: rgba(255, 255, 255, 0.75);
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      padding: 12px;
+      width: calc(100% - 30px);
+      z-index: 10; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .events-archive .card-container article .event-details {
+          bottom: auto;
+          top: 15px; }
+          .events-archive .card-container article .event-details h2 {
+            font-size: 1.5rem; }
+          .events-archive .card-container article .event-details h5 {
+            font-size: 1rem; } }
+    .events-archive .card-container article .event-img {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -5; }
+      .events-archive .card-container article .event-img img {
+        width: 100%; }
+
 /*# sourceMappingURL=child-theme.css.map */
