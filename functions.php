@@ -558,3 +558,12 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
+add_filter( 'body_class','add_body_class' );
+function add_body_class( $class ) {
+	if ( is_page('home') ) {
+		$class[] = 'wdc-home-page';
+	}
+	return $class;
+}
