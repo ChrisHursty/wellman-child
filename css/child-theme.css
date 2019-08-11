@@ -19229,13 +19229,13 @@ body {
     text-align: center;
     text-transform: uppercase; }
 
-.home .section-heading {
+.wdc-home-page .section-heading {
   background-color: #000000;
   padding: 10px 0 1px; }
-  .home .section-heading .row {
+  .wdc-home-page .section-heading .row {
     display: block;
     text-align: center; }
-    .home .section-heading .row h2 {
+    .wdc-home-page .section-heading .row h2 {
       color: #ffffff;
       font-family: "proxima-nova", sans-serif;
       font-size: 37px;
@@ -19244,17 +19244,17 @@ body {
       text-align: center;
       text-transform: uppercase; }
 
-.home .carousel-small {
+.wdc-home-page .carousel-small {
   padding-bottom: 40px;
   padding-left: 0;
   padding-right: 0; }
-  .home .carousel-small .owl-nav {
+  .wdc-home-page .carousel-small .owl-nav {
     display: none; }
-  .home .carousel-small .owl-stage-outer {
+  .wdc-home-page .carousel-small .owl-stage-outer {
     margin-top: 40px; }
-    .home .carousel-small .owl-stage-outer .owl-item .item {
+    .wdc-home-page .carousel-small .owl-stage-outer .owl-item .item {
       position: relative; }
-      .home .carousel-small .owl-stage-outer .owl-item .item h4 {
+      .wdc-home-page .carousel-small .owl-stage-outer .owl-item .item h4 {
         color: #ffffff;
         font-family: "proxima-nova", sans-serif;
         font-size: 20px;
