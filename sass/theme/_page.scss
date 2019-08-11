@@ -1,8 +1,18 @@
+
+
 .header-image {
 	align-items: center;
 	display: flex;
-	height: 400px;
+	height: 140px;
 	justify-content: center;
+
+	@media only screen and (min-width: 767px) {
+		height: 300px;
+	}
+
+	@media only screen and (min-width: 1025px) {
+		height: 400px;
+	}
 
 	.page-title {
 		background-color: rgba( 0, 0, 0, 0.7);
@@ -11,11 +21,15 @@
 		h1 {
 			color: $white;
 			font-family: $proxima;
-			font-size: 63px;
+			font-size: 30px;
 			font-style: italic;
 			font-weight: 900;
 			text-align: center;
 			text-transform: uppercase;
+
+			@media only screen and (min-width: 767px) {
+				font-size: 63px;
+			}
 		}
 	}
 }

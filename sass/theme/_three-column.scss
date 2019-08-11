@@ -1,0 +1,116 @@
+.three-column {
+	.header-image {
+		height: 140px;
+
+		@media only screen and (min-width: 767px) {
+			height: 300px;
+		}
+
+		@media only screen and (min-width: 1025px) {
+			height: 400px;
+		}
+	}
+}
+
+.three-column {
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+
+		.page-title {
+			@media only screen and (max-width: 767px) {
+				padding: 15px 25px 10px;
+
+				h1 {
+					font-size: 6vw;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.column-container {
+			a:hover {
+				cursor: pointer;
+			}
+
+			.tile-container {
+				display: flex;
+				justify-content: center;
+				position: relative;
+
+				.tile-title {
+					align-self: center;
+					background-color: rgba( 0, 0, 0, 0.7);
+					padding: 30px 50px 20px;
+					position: absolute;
+					transition: background-color .5s ease-out;
+
+					h2 {
+						color: $white;
+						font-family: $proxima;
+						font-size: 6vw;
+						font-style: italic;
+						font-weight: 900;
+						text-align: center;
+						text-transform: uppercase;
+						transition: color .5s ease-out;
+
+						@media only screen and (min-width: 767px) {
+							font-size: 2.9vw;
+						}
+
+						@media only screen and (min-width: 1025px) {
+							font-size: 3.3vw;
+						}
+					}
+
+					@media only screen and (max-width: 767px) {
+						padding: 15px 25px 10px;
+					}
+
+					@media only screen and (min-width: 768px) and (max-width: 1024px) {
+						padding: 22px 32px 15px;
+					}
+
+					&:hover {
+						background-color: rgba( 0, 0, 0, 0.5);
+						h2 {
+							color: $primary-dark;
+						}
+					}
+				}
+
+				.tile-image {
+					img {
+						width: 100%;
+					}
+				}
+			}
+
+			@media only screen and (max-width: 767px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	// Reset
+	.row {
+		justify-content: space-between;
+		margin-left: 0;
+		margin-right: 0;
+
+		.col-md-4 {
+			@media only screen and (min-width: 767px) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.col-12 {
+			@media only screen and (min-width: 767px) {
+				margin-bottom: 30px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}

@@ -28,7 +28,6 @@ get_header();
 				<div class="col-12 col-md-6">
 					<div class="card-container">
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-							
 							<div class="event-details">
 								<div class="page-title">
 									<a href="<?php echo the_permalink(); ?>">

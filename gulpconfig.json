@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "wellman.local/",
+    "proxy": "wellman:8890/",
     "notify": false
   },
   "browserSyncWatchFiles" : [

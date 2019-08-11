@@ -1,5 +1,14 @@
-<?php 
-get_header(); ?>
+<?php
+/**
+ * Template Name: Home Page
+ *
+ * Template for displaying Home Page
+ *
+ * @package understrap
+ */
+
+get_header();
+?>
 
 <div class="hero">
 	<div class="container-fluid">
