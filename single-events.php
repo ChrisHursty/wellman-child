@@ -21,6 +21,15 @@ if( !empty($location) ):
 <?php endif; ?>
 <div class="wrapper" id="single-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+		<div class="container">
+			<div class="row">
+				<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+				?>
+			</div>
+		</div>
 		<div class="row">
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>

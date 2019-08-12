@@ -25,6 +25,15 @@ $hero_image = get_field( 'three_column_hero_image' );
 </div>
 <div class="three-column wrapper" id="full-width-page-wrapper">
 	<div class="container-fluid" id="content">
+		<div class="container">
+			<div class="row">
+				<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+				?>
+			</div>
+		</div>
 		<div class="row">
 				<?php if( have_rows('three_column_category_tiles') ): ?>
 					<?php while( have_rows('three_column_category_tiles') ): the_row(); 

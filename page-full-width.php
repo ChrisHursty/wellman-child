@@ -22,6 +22,15 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
 </div>
 <div class="wrapper" id="full-width-page-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+		<div class="container">
+			<div class="row">
+				<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+				?>
+			</div>
+		</div>
 		<div class="row justify-content-md-center">
 			<div class="col-sm-12 col-md-10 col-lg-8 content-area" id="primary">
 				<main class="site-main" id="main" role="main">

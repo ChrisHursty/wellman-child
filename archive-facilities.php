@@ -21,6 +21,15 @@ get_header();
 </div>
 <div class="wrapper" id="archive-wrapper">
 	<div class="container-fluid" id="content" tabindex="-1">
+		<div class="container">
+			<div class="row">
+				<?php
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+				?>
+			</div>
+		</div>
 		<div class="row">
 			<?php if ( have_posts() ) : ?>
 				<?php /* Start the Loop */ ?>
