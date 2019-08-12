@@ -18864,12 +18864,11 @@ body {
             -ms-flex-pack: center;
                 justify-content: center;
         margin: 0 auto 20px;
-        padding: 6px 0;
+        padding: 6px 16px;
         text-align: center;
         text-transform: uppercase;
         -webkit-transition: background-color .3s ease-in-out;
-        transition: background-color .3s ease-in-out;
-        width: 140px; }
+        transition: background-color .3s ease-in-out; }
         .wdc-home-page .about-wdc .col .content button:hover {
           background-color: #000000;
           color: #ffffff;

@@ -37,7 +37,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css' );
 
 	// Home Page
-	if ( is_home() ) {
+	if ( is_page_template( 'page-home-page.php' ) ) {
 		wp_enqueue_style( 'carousel-styles', get_stylesheet_directory_uri() . '/css/canvas/swiper.css', array(), $the_theme->get( 'Version' ) );
 		wp_enqueue_script( 'carousel-scripts', get_stylesheet_directory_uri() . '/js/canvas/jquery.owlcarousel.js', array(), $the_theme->get( 'Version' ), true );
 		wp_enqueue_script( 'carousel-custom-scripts', get_stylesheet_directory_uri() . '/js/canvas/functions.js', array(), $the_theme->get( 'Version' ), true );

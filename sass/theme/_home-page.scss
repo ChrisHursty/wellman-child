@@ -79,11 +79,10 @@
 					font-weight: 900;
 					justify-content: center;
 					margin: 0 auto 20px;
-					padding: 6px 0;
+					padding: 6px 16px;
 					text-align: center;
 					text-transform: uppercase;
 					transition: background-color .3s ease-in-out;
-					width: 140px;
 
 					&:hover {
 						background-color: $black;
