@@ -99,10 +99,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-				<form class="form-inline" action="/" method="get">
+				<!-- <form class="form-inline" action="/" method="get">
 					<input type="text" name="s" id="search" value="<?php the_search_query(); ?>" />
 					<input type="image" alt="Search" src="<?php echo get_stylesheet_directory_uri(); ?>/images/search-icon.png" />
-				</form>
+				</form> -->
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

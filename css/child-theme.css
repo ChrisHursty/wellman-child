@@ -18655,6 +18655,16 @@ h1, h2, h3, h4, h5, h6,
 #breadcrumbs a {
   color: #0fbdff; }
 
+.entry-meta span,
+.entry-meta a {
+  font-family: "proxima-nova", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.entry-meta a {
+  color: #0fbdff; }
+
 body {
   background-color: #ffffff; }
 

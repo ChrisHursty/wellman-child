@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 ?>
-<div class="container-fluid header-image" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/facilities-hero.jpg') no-repeat; background-size: cover; background-position: 50% 50%;">
+<div class="container-fluid header-image" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/images/foundry-hero.jpg') no-repeat; background-size: cover; background-position: 50% 50%;">
 	<div class="page-title">
 		<h1>Facilities</h1>
 	</div>
